@@ -1,0 +1,35 @@
+{
+    "fr" : 
+    {
+        "le_casseur_des_codes": "<span>L</span>e Casseur des <b>Codes</b>",
+        "presentation" : "Salut je suis Idriss,",
+        "mon_parcourt" : "Mon parcourt",
+        "mes_creations" : "Mes Créations",
+        "mes_projets" : "Mes Projets",
+        "text_parcourt" : "Mon parcourt vraiment interessant... ",
+        "text_creation_1" : "Voici ma création... ",
+        "text_creation_2" : "Ca c'est la deuxième chose que j'ai faite... ",
+        "text_projet_1" : "Voila sur quoi je travail en ce moment...",
+        "text_projet_2" : "L'autre truck que je travail dessu",
+        "bouton_newsletter" : "S'abonner à la newsletter"
+        
+
+    },
+    
+    "en" : 
+    {
+        "le_casseur_des_codes": "<span>T</span>he <b>Code</b> Breaker",
+        "presentation" : "Hi, my name is Idriss",
+        "mon_parcourt" : "My Background",
+        "mes_creations" : "My Creations",
+        "mes_projets" : "My projects",
+        "text_parcourt" : "My very interesting background... ",
+        "text_creation_1" : "This is what I made...",
+        "text_creation_2" : "This is the second thing I did...",
+        "text_projet_1" : " This is what I'm working on...",
+        "text_projet_2" : "The other thing I'm working on... ",
+        "bouton_newsletter" : "Subscribe to newsletter"
+    }
+    
+
+}
