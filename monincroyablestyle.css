@@ -1,85 +1,32 @@
-body {
-
-
-
-    font-family: fantasy;
-    background-color: dimgrey;
-    margin: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-}
-
 ul {
     list-style: none;
     display: inline-block;
 }
 
-
-
-
-h3 {
-    margin: 0 100px;
+nav img {
+    width: 40px;
 }
 
-
-.presentation {
-
-
-    font-size: 4cap;
-
-}
-
-.parti-titre:hover {
-
-
-
-    letter-spacing: 20px;
-    transform: rotate(-5deg);
-    animation: anim 2s infinite linear reverse;
-}
-
-h1,
-h2 {
-    padding: 0 20px;
-}
-
-/* h2 span{
-    transition: 0.5s;
-}
- 
-h2 span:hover{
-transform: rotate(360deg);
-} */
-
-.parti-titre {
-
-    background: linear-gradient(90deg, rgb(230, 176, 0), blueviolet, rgb(230, 176, 0)) left/100% 100%;
-    background-size: 50%;
+nav {
+    background: blueviolet;
     /* mix-blend-mode:; */
     display: flex;
-    justify-content: end;
+    padding-right: 20px;
     font-size: 1.2rem;
-    margin-bottom: 10px;
-    border: 10px solid;
-    border-style: solid;
-    border-radius: 100px;
-    background-color: blueviolet;
+    border: 5px;
     transition: 1s ease;
+
+}
+
+nav:hover {
+    animation: anim 1s linear reverse;
+    background: linear-gradient(180deg, #00000000 0%, blueviolet 50%);
+    background-size: 200% 200%;
 }
 
 @keyframes anim {
+
     100% {
-        background-position: right
+        background-position: top;
     }
-}
-
-.segment {
-    margin: 10px;
-}
-
-form ul {
-    list-style: none;
 }

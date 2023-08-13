@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="x-default">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- custom css -->
   <link rel="stylesheet" href="monincroyablestyle.css" />
-  <title>Idriss Balijon</title>
+  <!-- using bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <!--custom script -->
   <script src="Scripts/script.js" defer></script>
+
+  <title>Idriss Balijon</title>
+
 </head>
+
 <body>
   <header>
-    <nav>
-      <ul>
-        <li>Logo</li>
-        <li>
-          <div class="lang-buttons">
-            <button onclick="changeLangue('fr')">Fr</button>
-            <button onclick="changeLangue('en')">En</button>
-          </div>
-        </li>
-      </ul>
+    <nav class="navbar">
+
+      <a class="navbar-brand" href="#">
+        <img src="Asset/img/Profil3,10 14 07 23.jpg" alt="Idriss Balijon profil">
+      </a>
       <ul>
         <li>
           Mes Créations
@@ -26,12 +33,19 @@
         <li>
           Mes Projets
         </li>
+        <li class="lang-buttons">
+          <button onclick="changeLangue('fr')">Fr</button>
+          <button onclick="changeLangue('en')">En</button>
+        </li>
       </ul>
     </nav>
+
+
+
   </header>
   <div class="parti-titre">
     <h1>IDRISS BALIJON</h1>
-    
+
     <h2 contenu="le_casseur_des_codes"></h2>
   </div>
   <div class="presentation" contenu="presentation"></div>
@@ -60,4 +74,5 @@
     </ul>
   </form>
 </body>
+
 </html>
