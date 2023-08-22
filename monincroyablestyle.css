@@ -3,30 +3,40 @@ ul {
     display: inline-block;
 }
 
+.body {
+    background-color: black;
+}
+
 nav img {
-    width: 40px;
+    width: 100px;
+    border-width: 2px;
+    border-radius: 100%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    border: solid black;
+
 }
 
 nav {
     background: blueviolet;
-    /* mix-blend-mode:; */
-    display: flex;
-    padding-right: 20px;
     font-size: 1.2rem;
-    border: 5px;
-    transition: 1s ease;
+    transition-property: background-color box-shadow;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    box-shadow: 0px 10px 10px rgba(0, 0, 255, .2);
 
 }
 
 nav:hover {
+
     animation: anim 1s linear reverse;
-    background: linear-gradient(180deg, #00000000 0%, blueviolet 50%);
+    background: linear-gradient(180deg, blueviolet 0%, #00000000 50%);
     background-size: 200% 200%;
+    box-shadow: none;
 }
 
 @keyframes anim {
 
     100% {
-        background-position: top;
+        background-position: bottom;
     }
 }
