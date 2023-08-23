@@ -26,17 +26,24 @@ nav {
 
 }
 
-nav:hover {
-
-    animation: anim 1s linear reverse;
-    background: linear-gradient(180deg, blueviolet 0%, #00000000 50%);
-    background-size: 200% 200%;
-    box-shadow: none;
-}
-
-@keyframes anim {
-
-    100% {
-        background-position: bottom;
+@media screen and (max-width: 473px) {
+    nav .parti-titre {
+        color: white;
+        order: 2;
+        margin: 0 auto;
     }
-}
+
+    nav:hover {
+
+        animation: anim 1s linear reverse;
+        background: linear-gradient(180deg, blueviolet 0%, #00000000 50%);
+        background-size: 200% 200%;
+        box-shadow: none;
+    }
+
+    @keyframes anim {
+
+        100% {
+            background-position: bottom;
+        }
+    }
