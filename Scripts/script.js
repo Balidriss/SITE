@@ -1,46 +1,41 @@
-console.log('bonjour');
+let rowJSONContenu;
 
+function changeLangue(lang) {
 
-
-function changeLangue(lang) 
-{   
-    
     fetch('JSON/contenu.json')
-    
-    .then(response => response.json())
 
-    
-    .then(data => 
-        { 
+        .then(response => response.json())
+
+
+        .then(data => {
             const elements = document.querySelectorAll('[contenu]');
 
             elements.forEach(
-                element => 
-                { 
+                element => {
                     const key = element.getAttribute('contenu');
-                   
-                if(data[lang] && data[lang][key])
-                {
 
-                element.style.display = 'block';
-                element.innerHTML= data[lang][key];
+                    if (data[lang] && data[lang][key]) {
 
-                }
+                        element.style.display = 'block';
+                        element.innerHTML = data[lang][key];
 
-            });
+                    }
+
+                });
 
         })
-    .catch(error => { console.error('probleme JSON introuvable')});
+        .catch(error => { console.error('probleme JSON introuvable') });
 
 
 }
 
-function detecteLangue()
-{
+
+function detecteLangue() {
     console.log(navigator.language);
-    
-    return  navigator.language != 'fr' ? 'en' : 'fr'; 
+
+    return navigator.language != 'fr' ? 'en' : 'fr';
 }
+
 
 changeLangue(detecteLangue());
-    
+
