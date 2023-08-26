@@ -14,7 +14,7 @@ function changeLangue(lang) {
 
                     if (data[lang] && data[lang][key]) {
 
-                        element.style.display = 'inline';
+                        element.style.display = 'block';
                         element.innerHTML = data[lang][key];
 
                     }
