@@ -4,7 +4,7 @@
 }
 
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 515px) {
 
     .col-1 {
         width: 8.33%;
@@ -55,7 +55,7 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 516px) {
 
     .col-s-1 {
         width: 8.33%;
@@ -107,7 +107,7 @@
 }
 
 body {
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background-color: #cf8e02;
 }
@@ -123,26 +123,29 @@ ul {
 header {
     background: blueviolet;
     font-size: 2em;
-    transition-property: background-color box-shadow;
-    transition-duration: 1s;
-    transition-timing-function: ease;
+
     box-shadow: 0px 10px 10px rgba(0, 0, 255, .2);
     margin: 0px;
     padding: 10px;
     display: flex;
     height: 10vh;
-
+    font-size: 2em;
+    /* transition-property: background-color box-shadow;
+    transition-duration: 1s;
+    transition-timing-function: ease; */
 }
 
 nav {
     background-color: #333;
     width: 100%;
-    padding: 10px;
+    padding-top: 10px;
+    margin: 0;
+
 }
 
 nav li:hover {
     background: linear-gradient(rgba(0, 0, 0, 0) 0%, #cf8e02 100%);
-
+    color: black;
 }
 
 
@@ -152,7 +155,7 @@ nav ul {
     justify-content: space-around;
     font-size: 1.2em;
     text-align: center;
-
+    color: white;
 }
 
 
@@ -176,13 +179,13 @@ header img {
 
 
 
-header:hover {
+/* header:hover {
 
     animation: anim 1s linear reverse;
     background: linear-gradient(180deg, blueviolet 0%, #00000000 50%);
     background-size: 200% 200%;
     box-shadow: none;
-}
+} */
 
 @keyframes anim {
 
@@ -250,8 +253,8 @@ header:hover {
 
         display: flex;
         flex-direction: column;
-        font-size: 0.4em;
-
+        font-size: 0.35em;
+        text-align: left;
 
     }
 
@@ -259,11 +262,15 @@ header:hover {
     nav {
         overflow: hidden;
         position: fixed;
-        bottom: 0;
+        bottom: 0px;
+        padding-top: 0;
+        padding-bottom: 10px;
+
     }
 
     nav li:hover {
         background: linear-gradient(#cf8e02 0%, rgba(0, 0, 0, 0) 100%);
+        color: black;
 
     }
 
