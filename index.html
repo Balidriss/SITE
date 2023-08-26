@@ -16,47 +16,53 @@
 <body>
 
   <header>
-    <nav>
-      <div class="col-6">
-        <img src="Asset/img/Profil3,10 14 07 23.png" alt="Idriss Balijon profil">
-      </div>
-      <ul class="lang-buttons">
-        <li>
-          <a onclick="changeLangue('fr')">Fr</a>
-        </li>
-        <li>
-          <a onclick="changeLangue('en')">En</a>
-        </li>
-      </ul>
-      </div>
-    </nav>
-    <ul class="parti-titre">
-      <li>
+
+    <div class="col-3 col-s-3">
+      <img src="Asset/img/Profil3,10 14 07 23.png" alt="Idriss Balijon profil">
+    </div>
+    <div class="col-6 col-s-6">
+      <div class="parti-titre">
+
         <h1>IDRISS BALIJON</h1>
-      </li>
-      <li>
         <h2 contenu="le_casseur_des_codes"></h2>
-      </li>
-    </ul>
+      </div>
+    </div>
+    <div class="lang-buttons col-3 col-s-3">
+      <a onclick="changeLangue('fr')">Fr</a>
+      <a onclick="changeLangue('en')">En</a>
+    </div>
 
   </header>
 
-  <div class="presentation" contenu="presentation"></div>
-  <div class="parcourt">
+  <section class="presentation">
+    <div contenu="presentation"></div>
+  </section>
+
+  <section class="background">
     <h3 contenu="mon_parcourt"></h3>
     <div contenu="text_parcourt"></div>
-  </div>
-  <div class="segment">
+    </div>
+  </section>
+  <section class="made">
     <h3 contenu="mes_creations"></h3>
     <div contenu="text_creation_1"></div>
     <div contenu="text_creation_2"></div>
-  </div>
-  <div class="segment">
+  </section>
+  <section class="projects">
     <h3 contenu="mes_projets"></h3>
     <div contenu="text_projet_1"></div>
     <div contenu="text_projet_2"></div>
-  </div>
-  <form action="/leads-subscribing-newsletter" method="post">
+  </section>
+
+  <nav>
+    <ul>
+      <li contenu="presentation"></li>
+      <li contenu="mon_parcourt"></li>
+      <li contenu="mes_creations"></li>
+      <li contenu="mes_projets"></li>
+    </ul>
+  </nav>
+  <!-- <form action="/leads-subscribing-newsletter" method="post">
     <ul>
       <li><label for="email">E-mail :</label></li>
       <li><input id="email" name="subscriber_email" type="email" /></li>
@@ -65,7 +71,7 @@
         <div contenu="bouton_newsletter"></div>
       </button>
     </ul>
-  </form>
+  </form> -->
 
 </body>
 

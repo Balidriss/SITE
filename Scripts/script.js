@@ -1,5 +1,3 @@
-let rowJSONContenu;
-
 function changeLangue(lang) {
 
     fetch('JSON/contenu.json')
@@ -16,7 +14,7 @@ function changeLangue(lang) {
 
                     if (data[lang] && data[lang][key]) {
 
-                        element.style.display = 'block';
+                        element.style.display = 'inline';
                         element.innerHTML = data[lang][key];
 
                     }
@@ -38,4 +36,18 @@ function detecteLangue() {
 
 
 changeLangue(detecteLangue());
+
+class squareButton {
+    constructor(typeContent, content) {
+        this.content = content;
+        this.typeContent = typeContent;
+    }
+    showContent() {
+
+    }
+}
+const squaresBtn = document.querySelectorAll('.squareButton');
+squaresBtn.forEach(squareButton => {
+    squareButton.addEventListener('click', () => { squareButton.showContent(); })
+})
 

@@ -1,7 +1,8 @@
 {
     "fr": {
         "le_casseur_des_codes": "Le Casseur des <b>Codes</b>",
-        "presentation": "Salut, je suis Idriss,",
+        "presentation": "A propos de moi",
+        "ma_presentation": "Salut, je suis Idriss, Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum?",
         "mon_parcourt": "Mon parcourt",
         "mes_creations": "Mes Créations",
         "mes_projets": "Mes Projets",
@@ -14,7 +15,8 @@
     },
     "en": {
         "le_casseur_des_codes": "The <b>Code</b> Breaker",
-        "presentation": "Hi, my name is Idriss",
+        "presentation": "About me",
+        "ma_presentation": "Hi, my name is Idriss",
         "mon_parcourt": "My Background",
         "mes_creations": "My Creations",
         "mes_projets": "My projects",
