@@ -1,8 +1,14 @@
 :root {
     --violet: #712cf9;
     --orange: #FAA346;
+    --gris: #333;
+
+    /* pixelanimation */
+    --gapPixel: 1px;
 
 }
+
+
 
 
 [class*="col-"] {
@@ -149,7 +155,7 @@ header {
 }
 
 nav {
-    background-color: #333;
+    background-color: var(--gris);
     width: 100%;
     padding-top: 10px;
     margin: 0;
@@ -236,8 +242,6 @@ header img {
 
 }
 
-
-
 header h1,
 header h2 {
     text-align: center;
@@ -278,5 +282,50 @@ header h2 {
         color: black;
 
     }
+}
 
+/* mon bg Anime */
+
+#bgAnime {
+    background: var(--orange);
+    margin: 10px 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gapPixel);
+}
+
+.pixelAnime {
+
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    transition: 1s all ease;
+
+}
+
+.pixelAnime:hover {
+    background: var(--violet);
+}
+
+.switchLight {
+    animation: animeBgPixel 2s linear forwards;
+}
+
+@keyframes animeBgPixel {
+    0% {
+        background: transparent;
+    }
+
+    50% {
+        background: var(--gris);
+    }
+
+    100% {
+        background: transparent;
+    }
 }
