@@ -1,5 +1,5 @@
 let bgAnimated = document.getElementById("bgAnime");
-let resolutionPixel = 10000; //a touché
+let resolutionPixel = 500; //a touché
 
 let box = document.querySelector('#bgAnime');
 let width = box.clientWidth;
@@ -20,4 +20,4 @@ Animate = () => {
 
 }
 
-setInterval(Animate);
+setInterval(Animate, 500);
