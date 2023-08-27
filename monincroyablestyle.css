@@ -128,7 +128,6 @@ body {
 
 ul {
     list-style: none;
-    display: inline-block;
     margin: 0;
     padding: 0;
 
@@ -155,13 +154,23 @@ nav {
     padding-top: 10px;
     margin: 0;
 
+
 }
 
 nav li:hover {
     background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--orange) 100%);
+
+    font-weight: bolder;
+    letter-spacing: 1px;
     color: black;
+    border: none;
 }
 
+nav li {
+    transition: all ease 1s;
+    width: 34%;
+
+}
 
 
 nav ul {
@@ -258,8 +267,9 @@ header h2 {
         overflow: hidden;
         position: fixed;
         bottom: 0px;
-        padding-top: 0;
+        padding: 0;
         padding-bottom: 10px;
+
 
     }
 
