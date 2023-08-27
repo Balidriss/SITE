@@ -1,6 +1,9 @@
 let bgAnimated = document.getElementById("bgAnime");
 let resolutionPixel = 500; //a touché
 
+//fair calcul taille ecran / taille pixelAnime 
+
+
 let box = document.querySelector('#bgAnime');
 let width = box.clientWidth;
 let height = box.clientHeight;
