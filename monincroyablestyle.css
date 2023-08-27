@@ -301,8 +301,8 @@ header h2 {
 .pixelAnime {
 
     position: relative;
-    width: 10px;
-    height: 10px;
+    width: 50px;
+    height: 50px;
     background: transparent;
     transition: 1s all ease;
 

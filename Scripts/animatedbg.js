@@ -20,4 +20,4 @@ Animate = () => {
 
 }
 
-setInterval(Animate, 500);
+setInterval(Animate, 5);
