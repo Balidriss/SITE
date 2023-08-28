@@ -1,26 +1,40 @@
 let bgAnimated = document.getElementById("bgAnime");
-let resolutionPixel = 500; //a touché
 
-//fair calcul taille ecran / taille pixelAnime 
-
-
-let box = document.querySelector('#bgAnime');
-let width = box.clientWidth;
-let height = box.clientHeight;
-
-console.log({ width, height });
-
-for (let i = 1; i <= resolutionPixel; i++) {
+function createPixel() {
     let pixelAnime = document.createElement("span");
     pixelAnime.setAttribute("class", "pixelAnime");
     bgAnimated.appendChild(pixelAnime);
 }
 
-Animate = () => {
+
+
+
+
+let box = document.querySelector('#bgAnime');
+let width = box.clientWidth;
+let height = box.clientHeight; // ??? 0 ???
+console.log({ width, height });
+createPixel();
+
+let pixelSelector = document.querySelector(".pixelAnime");
+console.log(document.getElementsByClassName("pixelAnime"));
+pixelWidth = pixelSelector.clientWidth;
+console.log(pixelWidth);
+
+let resolutionPixel = (width / pixelWidth) * (400 / pixelWidth);
+
+
+
+
+for (let i = 3; i <= resolutionPixel; i++) {
+    createPixel()
+}
+
+AnimatePixel = () => {
     let pixelsAnimes = document.querySelectorAll(".pixelAnime");
     let position = Math.floor(Math.random() * pixelsAnimes.length);
     pixelsAnimes[position].classList.toggle("switchLight");
 
 }
 
-setInterval(Animate, 5);
+setInterval(AnimatePixel, 5);
