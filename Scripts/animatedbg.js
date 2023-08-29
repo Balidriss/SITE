@@ -21,12 +21,12 @@ console.log(document.getElementsByClassName("pixelAnime"));
 pixelWidth = pixelSelector.clientWidth;
 console.log(pixelWidth);
 
-let resolutionPixel = (width / pixelWidth) * (400 / pixelWidth);
+let totalPixel = (width / pixelWidth) * (400 / pixelWidth);
 
 
 
 
-for (let i = 3; i <= resolutionPixel; i++) {
+for (let i = 3; i <= totalPixel; i++) {
     createPixel()
 }
 
