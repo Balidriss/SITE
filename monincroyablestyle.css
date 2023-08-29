@@ -243,6 +243,10 @@ header img {
 
 }
 
+.lang-buttons a:hover {
+    cursor: pointer;
+}
+
 header h1,
 header h2 {
     text-align: center;
