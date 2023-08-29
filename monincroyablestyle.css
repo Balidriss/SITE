@@ -190,7 +190,7 @@ nav ul {
 
 
 
-section {
+section:not(#presentation) {
     display: none;
 }
 
@@ -292,7 +292,6 @@ header h2 {
 #bgAnime {
     background: var(--orange);
     margin: 10px 0;
-
     width: 100%;
     overflow: hidden;
     position: relative;
