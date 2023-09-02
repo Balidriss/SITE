@@ -3,15 +3,18 @@ function changeLangue(lang) {
     fetch('JSON/contenu.json')
         .then(response => response.json())
         .then(data => {
+            if(data)
+            {
             const elements = document.querySelectorAll('[contenu]');
             elements.forEach(
                 element => {
                     const key = element.getAttribute('contenu');
                     if (data[lang] && data[lang][key]) {
-                        element.style.display = 'inline';
+                        element.style.display = 'block';
                         element.innerHTML = data[lang][key];
                     }
                 });
+            }
         })
         .catch(error => { console.error('probleme JSON introuvable') });
 }

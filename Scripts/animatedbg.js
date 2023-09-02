@@ -12,7 +12,7 @@ function createPixel() {
 
 let box = document.querySelector('#bgAnime');
 let width = box.clientWidth;
-let height = box.clientHeight; // ??? 0 ???
+let height = 400; //box.clientHeight; // ??? 0 ???
 console.log({ width, height });
 createPixel();
 
@@ -21,7 +21,7 @@ console.log(document.getElementsByClassName("pixelAnime"));
 pixelWidth = pixelSelector.clientWidth;
 console.log(pixelWidth);
 
-let totalPixel = (width / pixelWidth) * (400 / pixelWidth);
+let totalPixel = (width / pixelWidth) * (height / pixelWidth);
 
 
 
