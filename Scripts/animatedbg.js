@@ -1,40 +1,42 @@
-let bgAnimated = document.getElementById("bgAnime");
+let bgAnimated = document.createElement("div");
+bgAnimated.className = "bgAnime";
+document.body.appendChild(bgAnimated);
+let pixelAnime = document.createElement("span");
+pixelAnime.className = "pixelAnime";
+bgAnimated.appendChild(pixelAnime)
+console.log(bgAnimated);
 
-function createPixel() {
+const row = 3;
+
+for (let currentW = pixelAnime.clientWidth; currentW < bgAnimated.clientWidth * row; currentW += pixelAnime.clientWidth) {
     let pixelAnime = document.createElement("span");
-    pixelAnime.setAttribute("class", "pixelAnime");
-    bgAnimated.appendChild(pixelAnime);
+    pixelAnime.className = "pixelAnime";
+    bgAnimated.appendChild(pixelAnime)
+    console.log(currentW, pixelAnime.clientWidth, bgAnimated.clientWidth);
 }
 
 
 
-
-
-let box = document.querySelector('#bgAnime');
-let width = box.clientWidth;
-let height = 400; //box.clientHeight; // ??? 0 ???
-console.log({ width, height });
-createPixel();
-
-let pixelSelector = document.querySelector(".pixelAnime");
-console.log(document.getElementsByClassName("pixelAnime"));
-pixelWidth = pixelSelector.clientWidth;
-console.log(pixelWidth);
-
-let totalPixel = (width / pixelWidth) * (height / pixelWidth);
+setInterval(animateRdmPixel, 1000);
 
 
 
 
-for (let i = 3; i <= totalPixel; i++) {
-    createPixel()
+
+
+
+
+function getNmbPerRow(container, element) {
+    console.log(container.clientWidth);
+    console.log(element.clientWidth);
+    return container.clientWidth / element.clientWidth;
 }
 
-AnimatePixel = () => {
+
+function animateRdmPixel() {
+
     let pixelsAnimes = document.querySelectorAll(".pixelAnime");
-    let position = Math.floor(Math.random() * pixelsAnimes.length);
-    pixelsAnimes[position].classList.toggle("switchLight");
-
+    let rdmPixel = Math.floor(Math.random() * pixelsAnimes.length);
+    pixelsAnimes[rdmPixel].classList.toggle("switchLight");
 }
 
-setInterval(AnimatePixel, 5);

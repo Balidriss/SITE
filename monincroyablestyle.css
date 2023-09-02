@@ -1,10 +1,25 @@
 :root {
-    --violet: #712cf9;
+
+    /* Couleurs */
+
+    --violetC: #712cf9;
+    --violetF: #430EAD;
     --orange: #FAA346;
+    --vertC: #14FA38;
+    --vertF: #17AD2E;
     --gris: #333;
 
+    /* couleur elements */
+
+    --pixelBgColor: var(--orange);
+    --headerColor: var(--violetC);
+    --langBtnBgColor: var(--orange);
+    --hoverFontColor: var(--orange);
+
     /* pixelanimation */
+
     --gapPixel: 0;
+    --taillePixel: 20vw;
 
 }
 
@@ -140,7 +155,7 @@ ul {
 }
 
 header {
-    background: var(--violet);
+    background: var(--headerColor);
     font-size: 1em;
     box-shadow: 0px 10px 10px rgba(0, 0, 255, .2);
     margin: 0px;
@@ -148,33 +163,31 @@ header {
     display: flex;
     justify-content: space-between;
 
-
-    /* transition-property: background-color box-shadow;
-    transition-duration: 1s;
-    transition-timing-function: ease; */
 }
 
 nav {
-    background-color: var(--gris);
+    background-color: transparent;
     width: 90%;
-    padding-top: 10px;
-    margin: 0 auto;
+    padding: 0;
+    margin: 10px auto 0 auto;
 }
 
 nav li:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--orange) 100%);
-    cursor:pointer;
+    /* background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--orange) 100%); */
+    cursor: pointer;
     font-weight: bolder;
     letter-spacing: 1px;
-    color: black;
+    color: var(--hoverFontColor);
     border: none;
     padding: 10 0;
 }
 
 nav li {
     transition: all ease 1s;
-    width: 34%;
-
+    width: 30%;
+    padding: 10px 0;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--gris);
 }
 
 
@@ -187,16 +200,18 @@ nav ul {
 }
 
 
-section{
+section {
+    transition: 1s ease all;
     display: block;
-    position:absolute;
-    width: 100%;
-    height: 100%;
-    z-index:3;
+    position: absolute;
+    background-color: var(--gris);
+    width: 90%;
+    margin: 0 5%;
+    z-index: 3;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-section:not(#presentation)
-{
+section:not(#presentation) {
     display: none;
 }
 
@@ -222,12 +237,7 @@ header img {
     box-shadow: none;
 } */
 
-@keyframes anim {
 
-    100% {
-        background-position: bottom;
-    }
-}
 
 
 .lang-buttons {
@@ -240,7 +250,7 @@ header img {
 }
 
 .lang-buttons a {
-    background-color: var(--orange);
+    background-color: var(--langBtnBgColor);
     width: 10px;
     border: solid 1px;
     padding: 3px 5px;
@@ -264,7 +274,7 @@ header h2 {
     font-size: smaller;
 }
 
-.squareButton {
+/* .squareButton {
     width: 100px;
     height: 100px;
     background-color: lightgray;
@@ -274,56 +284,56 @@ header h2 {
     text-align: center;
     line-height: 100px;
     cursor: pointer;
-}
+} */
 
 @media screen and (max-width: 600px) {
 
     nav {
+
         overflow: hidden;
         position: fixed;
         bottom: 0px;
         padding: 0;
         padding-bottom: 10px;
-    }
-
-    nav li:hover {
-        background: linear-gradient(var(--orange) 0%, rgba(0, 0, 0, 0) 100%);
-        color: black;
-
+        margin-left: 5%;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.50);
+        font-size: small;
     }
 }
 
 /* mon bg Anime */
 
-#bgAnime {
-    background: var(--orange);
-    margin: 0px auto;
-    width: 90%;
+.bgAnime {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: var(--gapPixel);
-    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.5);
-    justify-content: center;
+    z-index: -2;
 }
 
 .pixelAnime {
 
     position: relative;
+    width: var(--taillePixel);
+    height: var(--taillePixel);
 
-    width: 5vw;
-    height: 5vw;
-    background: transparent;
-    transition: 1s all ease;
+    margin: 0;
+    padding: 0;
 
 }
 
 .pixelAnime:hover {
-    background: var(--violet);
+    background: var(--violetC);
 }
 
 .switchLight {
-    animation: animeBgPixel 2s linear forwards;
+    animation: normal animeBgPixel 1s linear forwards;
 }
 
 @keyframes animeBgPixel {
@@ -332,7 +342,7 @@ header h2 {
     }
 
     50% {
-        background: var(--gris);
+        background: var(--pixelBgColor);
     }
 
     100% {
