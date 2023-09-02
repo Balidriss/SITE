@@ -1,42 +1,58 @@
 let bgAnimated = document.createElement("div");
 bgAnimated.className = "bgAnime";
+bgAnimated.classList.add("row");
 document.body.appendChild(bgAnimated);
-let pixelAnime = document.createElement("span");
-pixelAnime.className = "pixelAnime";
-bgAnimated.appendChild(pixelAnime)
-console.log(bgAnimated);
 
-const row = 3;
+for (let i = 0; i < 12; i++) {
+    const col = document.createElement("div");
+    col.className = "col-pixel";
+    bgAnimated.appendChild(col);
 
-for (let currentW = pixelAnime.clientWidth; currentW < bgAnimated.clientWidth * row; currentW += pixelAnime.clientWidth) {
-    let pixelAnime = document.createElement("span");
-    pixelAnime.className = "pixelAnime";
-    bgAnimated.appendChild(pixelAnime)
-    console.log(currentW, pixelAnime.clientWidth, bgAnimated.clientWidth);
 }
 
 
 
-setInterval(animateRdmPixel, 1000);
+const totalPixelPerCol = 50;
+bgAnimated.childNodes.forEach(element => {
+    for (let currentCountPixelPerCol = 0; currentCountPixelPerCol < totalPixelPerCol; currentCountPixelPerCol++) {
+        let pixelAnime = document.createElement("span");
+        pixelAnime.className = "pixelAnime";
+        element.appendChild(pixelAnime)
+
+    }
+
+});
+
+// 
 
 
+function animateRainPixel(arrayPixel) {
+    setTimeout(() => {
+        for (let i = 0; i < arrayPixel.length; i++) {
 
-
-
-
-
-
-function getNmbPerRow(container, element) {
-    console.log(container.clientWidth);
-    console.log(element.clientWidth);
-    return container.clientWidth / element.clientWidth;
+            setTimeout(() => { arrayPixel[i].classList.toggle("switchLight"); }, 50 * i)
+        };
+    }, Math.random() * 10000)
 }
 
+const arrayColPixels = document.querySelectorAll(".col-pixel");
 
-function animateRdmPixel() {
+function animateRainOnColRandom(arrayColPixels) {
 
-    let pixelsAnimes = document.querySelectorAll(".pixelAnime");
-    let rdmPixel = Math.floor(Math.random() * pixelsAnimes.length);
-    pixelsAnimes[rdmPixel].classList.toggle("switchLight");
+    for (let i = 0; i < arrayColPixels.length; i++) {
+        setInterval(() => {
+            animateRainPixel(arrayColPixels[i].childNodes);
+        }, 1 + (Math.random() * 1200))
+    }
+
+
 }
+
+animateRainOnColRandom(arrayColPixels);
+// function animateRdmPixel() {
+
+//     let pixelsAnimes = document.querySelectorAll(".pixelAnime");
+//     let rdmPixel = Math.floor(Math.random() * pixelsAnimes.length);
+//     pixelsAnimes[rdmPixel].classList.toggle("switchLight");
+// }
 

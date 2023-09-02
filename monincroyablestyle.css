@@ -14,12 +14,12 @@
     --pixelBgColor: var(--orange);
     --headerColor: var(--violetC);
     --langBtnBgColor: var(--orange);
-    --hoverFontColor: var(--orange);
+    --hoverFontColor: black;
+    --fontTabColor: var(--orange)
+        /* pixelanimation */
 
-    /* pixelanimation */
-
-    --gapPixel: 0;
-    --taillePixel: 20vw;
+        --gapPixel: 0;
+    --taillePixel: 100%;
 
 }
 
@@ -173,7 +173,7 @@ nav {
 }
 
 nav li:hover {
-    /* background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--orange) 100%); */
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--orange) 100%);
     cursor: pointer;
     font-weight: bolder;
     letter-spacing: 1px;
@@ -187,7 +187,7 @@ nav li {
     width: 30%;
     padding: 10px 0;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
-    background-color: var(--gris);
+    background-color: var(--fontTabColor);
 }
 
 
@@ -196,7 +196,7 @@ nav ul {
     justify-content: space-around;
     font-size: 1.2em;
     text-align: center;
-    color: white;
+    color: var(--orange);
 }
 
 
@@ -311,21 +311,22 @@ header h2 {
     height: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: var(--gapPixel);
     z-index: -2;
+}
+
+.col-pixel {
+    width: 8.33vw;
 }
 
 .pixelAnime {
 
     position: relative;
-    width: var(--taillePixel);
-    height: var(--taillePixel);
-
+    display: block;
+    height: 8.33vw;
     margin: 0;
     padding: 0;
-
 }
 
 .pixelAnime:hover {
@@ -341,7 +342,7 @@ header h2 {
         background: transparent;
     }
 
-    50% {
+    25% {
         background: var(--pixelBgColor);
     }
 
