@@ -11,18 +11,18 @@
 
     /* couleur elements */
 
-    --pixelBgColor: var(--orange);
+    --pixelBgColor: var(--vertC);
     --headerColor: var(--violetC);
     --langBtnBgColor: var(--orange);
     --hoverFontColor: black;
     --fontTabColor: var(--orange);
     --bgTabColor: var(--gris);
-
+    --headerShadowColor: var(--vertF);
     /* misc */
 
     --zTabPhone: 1;
     --zTab: 1;
-    --zSection: 100;
+    --zSection: 2;
     --zBgAnime: -1;
 
 
@@ -149,6 +149,9 @@
     display: flex;
     flex-direction: row;
     margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -167,7 +170,7 @@ ul {
 header {
     background: var(--headerColor);
     font-size: 1em;
-    box-shadow: 0px 10px 10px rgba(0, 0, 255, .2);
+    box-shadow: 0px 10px 10px var(--vertF);
     margin: 0px;
     padding: 10px;
     display: flex;
@@ -183,6 +186,7 @@ header .header-titre:hover {
 
 
 nav {
+
     background-color: transparent;
     width: 90%;
     padding: 0;
@@ -191,11 +195,10 @@ nav {
 }
 
 nav li:hover {
-    background: linear-gradient(var(--bgTabColor) 80%, var(--vertF) 100%);
+    background: linear-gradient(var(--bgTabColor) 70%, var(--vertF) 100%);
     cursor: pointer;
     font-weight: bolder;
     letter-spacing: 1px;
-    color: var(--hoverFontColor);
     border: none;
     padding: 10 0;
 }
@@ -225,14 +228,80 @@ nav ul {
 section {
     transition: 1s ease all;
     position: relative;
-    display: block;
+    display: inline-flex;
+    flex-wrap: wrap;
     overflow: auto;
-    background-color: var(--gris);
+    background-color: transparent;
     width: 90%;
-    height: 80vh;
     margin: 0 5%;
     z-index: var(--zSection);
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    height: 70vh;
+
+}
+
+.end-section-body,
+.start-section-body {
+    overflow: hidden;
+    padding: 5px;
+    background-color: var(--gris);
+    position: relative;
+    box-shadow: 0px 0px 5px 5px var(--vertF);
+    width: 90vw;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.end-section-body {
+    width: 100%;
+    padding: 1px 0;
+
+
+}
+
+.scrolling-news {
+    flex-wrap: nowrap;
+    display: flex;
+    transform: translateX(100%);
+    animation: scrollingAnim 15s linear infinite;
+    text-overflow: clip;
+    overflow: visible;
+    white-space: nowrap;
+    gap: 100px;
+}
+
+@keyframes scrollingAnim {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.box-container {
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--gris);
+    overflow: hidden;
+    display: inline-flex;
+    padding: 10px;
+    margin: 10px;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 1px;
+
+}
+
+.align-left {
+    align-items: flex-start;
+}
+
+.align-right {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
 }
 
 section:not(#presentation) {
@@ -313,25 +382,22 @@ header h2 {
 @media screen and (max-width: 600px) {
 
     nav {
-
-        position: fixed;
-        bottom: 0px;
-        left: 5%;
         padding: 0;
-        padding-bottom: 10px;
-        height: 10vh;
         font-size: small;
         flex-direction: column;
         justify-content: flex-end;
         z-index: var(--zTabPhone);
     }
 
-    section {
-        height: 77vh;
-    }
+
 
     header {
-        height: 10vh;
+
+        font-size: small;
+    }
+
+    header .header-titre {
+        font-size: 1em;
     }
 
     nav li {
@@ -368,6 +434,8 @@ header h2 {
     height: 4vw;
     margin: 0;
     padding: 0;
+    text-align: center;
+    color: var(--gris);
 }
 
 .pixelAnime:hover {
@@ -375,12 +443,12 @@ header h2 {
 }
 
 .switchLight {
-    animation: normal animeBgPixel 0.5s linear forwards;
+    animation: normal animeBgPixel 2s linear forwards;
 }
 
 @keyframes animeBgPixel {
     0% {
-        background: var(--pixelBgColor);
+        color: var(--pixelBgColor);
     }
 
     100% {

@@ -11,7 +11,9 @@
         "text_creation_2": "Ca c'est la deuxième chose que j'ai faite... ",
         "text_projet_1": "Voila sur quoi je travail en ce moment...",
         "text_projet_2": "L'autre truck que je travail dessu",
-        "bouton_newsletter": "S'abonner à la newsletter"
+        "bouton_newsletter": "S'abonner à la newsletter",
+        "news 1": "03/09 Nouvelle démo disponible ! Rends-toi dans mes 'projets'.",
+        "news 2": "Inscris-toi à la newsletter !"
     },
     "en": {
         "le_casseur_des_codes": "The <b>Code</b> Breaker",
@@ -25,6 +27,8 @@
         "text_creation_2": "This is the second thing I did...",
         "text_projet_1": " This is what I'm working on...",
         "text_projet_2": "The other thing I'm working on... ",
-        "bouton_newsletter": "Subscribe to newsletter"
+        "bouton_newsletter": "Subscribe to newsletter",
+        "news 1": "03/09 New demo available !",
+        "news 2": "Inscris-toi à la newsletter !"
     }
 }

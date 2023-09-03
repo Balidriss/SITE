@@ -17,10 +17,9 @@
 
 <body>
 
-  <header onclick="showSection('presentation')">
-
-    <img src="Asset/img/Profil3,10 14 07 23.png" alt="Idriss Balijon profil">
-    <div class="header-titre">
+  <header>
+    <img onclick="showSection('presentation')" src="Asset/img/Profil3,10 14 07 23.png" alt="Idriss Balijon profil">
+    <div class="header-titre" onclick="showSection('presentation')">
       <h1>IDRISS BALIJON</h1>
       <h2 contenu="le_casseur_des_codes"></h2>
 
@@ -37,29 +36,57 @@
       <li onclick="showSection('projects')" contenu="mes_projets"></li>
     </ul>
   </nav>
-
+  <div class="start-section-body"></div>
   <section id="presentation">
-    <h3 contenu="presentation">
-    </h3>
-    <div contenu="ma_presentation"></div>
+
+    <div class="row">
+      <div class="box-container col-3 col-s-6 align-left">
+        <h3 contenu="presentation">
+        </h3>
+        <div contenu="ma_presentation"></div>
+      </div>
+      <div class="box-container col-9 col-s-6 align-center">
+        <h3> Yep that's me
+        </h3>
+        <img src="Asset/img/Profil3,10 14 07 23.png" width="30%" alt="Idriss Balijon profil">
+      </div>
+    </div>
+    <div class="row">
+      <div class="box-container col-12 align-center">
+        <h3> J'aime bien
+        </h3>
+        développer des truc en faite.
+      </div>
+    </div>
   </section>
 
   <section id="background">
-    <h3 contenu="mon_parcourt"></h3>
-    <button>Lol</button>
-    <div contenu="text_parcourt"></div>
-
+    <div class="box-container">
+      <h3 contenu="mon_parcourt"></h3>
+      <button>Lol</button>
+      <div contenu="text_parcourt"></div>
+    </div>
   </section>
   <section id="made">
-    <h3 contenu="mes_creations"></h3>
-    <div contenu="text_creation_1"></div>
-    <div contenu="text_creation_2"></div>
+    <div class="box-container">
+      <h3 contenu="mes_creations"></h3>
+      <div contenu="text_creation_1"></div>
+      <div contenu="text_creation_2"></div>
+    </div>
   </section>
   <section id="projects">
-    <h3 contenu="mes_projets"></h3>
-    <div contenu="text_projet_1"></div>
-    <div contenu="text_projet_2"></div>
+    <div class="box-container">
+      <h3 contenu="mes_projets"></h3>
+      <div contenu="text_projet_1"></div>
+      <div contenu="text_projet_2"></div>
+    </div>
   </section>
+  <div class="end-section-body">
+    <div class="scrolling-news row">
+      <div contenu="news 1"></div>
+      <div contenu="news 2"></div>
+    </div>
+  </div>
 </body>
 
 </html>
