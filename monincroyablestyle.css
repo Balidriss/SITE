@@ -15,10 +15,20 @@
     --headerColor: var(--violetC);
     --langBtnBgColor: var(--orange);
     --hoverFontColor: black;
-    --fontTabColor: var(--orange)
-        /* pixelanimation */
+    --fontTabColor: var(--orange);
+    --bgTabColor: var(--gris);
 
-        --gapPixel: 0;
+    /* misc */
+
+    --zTabPhone: 1;
+    --zTab: 1;
+    --zSection: 100;
+    --zBgAnime: -1;
+
+
+    /* pixelanimation */
+
+    --gapPixel: 0;
     --taillePixel: 100%;
 
 }
@@ -165,15 +175,23 @@ header {
 
 }
 
+header img:hover,
+header .header-titre:hover {
+    cursor: pointer;
+}
+
+
+
 nav {
     background-color: transparent;
     width: 90%;
     padding: 0;
     margin: 10px auto 0 auto;
+
 }
 
 nav li:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--orange) 100%);
+    background: linear-gradient(var(--bgTabColor) 80%, var(--vertF) 100%);
     cursor: pointer;
     font-weight: bolder;
     letter-spacing: 1px;
@@ -184,10 +202,13 @@ nav li:hover {
 
 nav li {
     transition: all ease 1s;
+    display: flex;
     width: 30%;
     padding: 10px 0;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
-    background-color: var(--fontTabColor);
+    background-color: var(--bgTabColor);
+    z-index: var(--zTab);
+
 }
 
 
@@ -197,17 +218,20 @@ nav ul {
     font-size: 1.2em;
     text-align: center;
     color: var(--orange);
+
 }
 
 
 section {
     transition: 1s ease all;
+    position: relative;
     display: block;
-    position: absolute;
+    overflow: auto;
     background-color: var(--gris);
     width: 90%;
+    height: 80vh;
     margin: 0 5%;
-    z-index: 3;
+    z-index: var(--zSection);
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -290,15 +314,31 @@ header h2 {
 
     nav {
 
-        overflow: hidden;
         position: fixed;
         bottom: 0px;
+        left: 5%;
         padding: 0;
         padding-bottom: 10px;
-        margin-left: 5%;
-        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.50);
+        height: 10vh;
         font-size: small;
+        flex-direction: column;
+        justify-content: flex-end;
+        z-index: var(--zTabPhone);
     }
+
+    section {
+        height: 77vh;
+    }
+
+    header {
+        height: 10vh;
+    }
+
+    nav li {
+
+        justify-content: space-around;
+    }
+
 }
 
 /* mon bg Anime */
@@ -313,18 +353,19 @@ header h2 {
     display: flex;
     flex-wrap: nowrap;
     gap: var(--gapPixel);
-    z-index: -2;
+    z-index: var(--zBgAnime);
+
 }
 
 .col-pixel {
-    width: 8.33vw;
+    width: 4vw;
 }
 
 .pixelAnime {
 
     position: relative;
     display: block;
-    height: 8.33vw;
+    height: 4vw;
     margin: 0;
     padding: 0;
 }
@@ -334,15 +375,11 @@ header h2 {
 }
 
 .switchLight {
-    animation: normal animeBgPixel 1s linear forwards;
+    animation: normal animeBgPixel 0.5s linear forwards;
 }
 
 @keyframes animeBgPixel {
     0% {
-        background: transparent;
-    }
-
-    25% {
         background: var(--pixelBgColor);
     }
 
