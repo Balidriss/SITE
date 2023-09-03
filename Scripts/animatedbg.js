@@ -4,7 +4,7 @@ bgAnimated.classList.add("row");
 document.body.appendChild(bgAnimated);
 
 // !!
-const nmbCol = 25;
+const nmbCol = 50;
 const totalPixelPerCol = 80;
 const vitesseRain = 500;
 const minimumDelay = 1000;
@@ -23,7 +23,7 @@ for (let i = 0; i < nmbCol; i++) {
 bgAnimated.childNodes.forEach(element => {
     for (let currentCountPixelPerCol = 0; currentCountPixelPerCol < totalPixelPerCol; currentCountPixelPerCol++) {
         let pixelAnime = document.createElement("span");
-        pixelAnime.innerText = "IB"
+        pixelAnime.innerText = "IB";
         pixelAnime.className = "pixelAnime";
         element.appendChild(pixelAnime)
 

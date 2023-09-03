@@ -18,6 +18,7 @@
     --fontTabColor: var(--orange);
     --bgTabColor: var(--gris);
     --headerShadowColor: var(--vertF);
+    --default-Font-Color: var(--orange);
     /* misc */
 
     --zTabPhone: 1;
@@ -30,6 +31,7 @@
 
     --gapPixel: 0;
     --taillePixel: 100%;
+    --pixel-size: 2vw;
 
 }
 
@@ -236,6 +238,7 @@ section {
     margin: 0 5%;
     z-index: var(--zSection);
     height: 70vh;
+    color: var(--default-Font-Color);
 
 }
 
@@ -258,26 +261,9 @@ section {
 
 }
 
-.scrolling-news {
-    flex-wrap: nowrap;
-    display: flex;
-    transform: translateX(100%);
-    animation: scrollingAnim 15s linear infinite;
-    text-overflow: clip;
-    overflow: visible;
-    white-space: nowrap;
-    gap: 100px;
-}
 
-@keyframes scrollingAnim {
-    0% {
-        transform: translateX(100%);
-    }
 
-    100% {
-        transform: translateX(-200%);
-    }
-}
+
 
 .box-container {
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
@@ -379,6 +365,28 @@ header h2 {
     cursor: pointer;
 } */
 
+.scrolling-news {
+    flex-wrap: nowrap;
+    display: flex;
+    transform: translateX(100%);
+    animation: scrollingAnim 30s linear infinite;
+    text-overflow: clip;
+    overflow: visible;
+    white-space: nowrap;
+    gap: 100%;
+    color: var(--default-Font-Color);
+}
+
+@keyframes scrollingAnim {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     nav {
@@ -389,7 +397,10 @@ header h2 {
         z-index: var(--zTabPhone);
     }
 
-    .scrolling-news {}
+    .scrolling-news {
+
+        animation: scrollingAnim 15s linear infinite;
+    }
 
 
     header {
@@ -425,14 +436,14 @@ header h2 {
 }
 
 .col-pixel {
-    width: 4vw;
+    width: var(--pixel-size);
 }
 
 .pixelAnime {
 
     position: relative;
     display: block;
-    height: 4vw;
+    height: var(--pixel-size);
     margin: 0;
     padding: 0;
     text-align: center;
