@@ -389,6 +389,7 @@ header h2 {
         z-index: var(--zTabPhone);
     }
 
+    .scrolling-news {}
 
 
     header {
