@@ -5,10 +5,10 @@ document.body.appendChild(bgAnimated);
 
 // !!
 const nmbCol = 50;
-const totalPixelPerCol = 80;
-const vitesseRain = 500;
+const totalPixelPerCol = 100;
+const vitesseRain = 0.1;
 const minimumDelay = 1000;
-const randomRange = 6000;
+const randomRange = 100000;
 // !!
 
 
@@ -63,4 +63,6 @@ animateRainOnColRandom(arrayColPixels);
 //     let rdmPixel = Math.floor(Math.random() * pixelsAnimes.length);
 //     pixelsAnimes[rdmPixel].classList.toggle("switchLight");
 // }
+
+/////////////////////////////////////
 

@@ -237,7 +237,6 @@ section {
     width: 90%;
     margin: 0 5%;
     z-index: var(--zSection);
-    height: 70vh;
     color: var(--default-Font-Color);
 
 }
@@ -257,7 +256,8 @@ section {
 .end-section-body {
     width: 100%;
     padding: 1px 0;
-
+    position: fixed;
+    bottom: 0;
 
 }
 
@@ -268,13 +268,12 @@ section {
 .box-container {
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
     background-color: var(--gris);
-    overflow: hidden;
+    overflow: auto;
     display: inline-flex;
     padding: 10px;
     margin: 10px;
     flex-direction: column;
     box-sizing: border-box;
-    min-height: 1px;
 
 }
 
@@ -387,6 +386,61 @@ header h2 {
     }
 }
 
+
+
+
+/* mon bg Anime */
+
+.bgAnime {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--gapPixel);
+    z-index: var(--zBgAnime);
+
+}
+
+.col-pixel {
+    width: var(--pixel-size);
+
+}
+
+.pixelAnime {
+
+    position: relative;
+    display: block;
+    height: var(--pixel-size);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+
+}
+
+.pixelAnime:hover {
+    background: var(--violetC);
+}
+
+.switchLight {
+    animation: normal animeBgPixel 2s linear forwards;
+}
+
+@keyframes animeBgPixel {
+    0% {
+        color: var(--pixelBgColor);
+
+    }
+
+    100% {
+        background: transparent;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
 
     nav {
@@ -417,53 +471,22 @@ header h2 {
         justify-content: space-around;
     }
 
-}
-
-/* mon bg Anime */
-
-.bgAnime {
-    position: absolute;
-    top: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: var(--gapPixel);
-    z-index: var(--zBgAnime);
-
-}
-
-.col-pixel {
-    width: var(--pixel-size);
-}
-
-.pixelAnime {
-
-    position: relative;
-    display: block;
-    height: var(--pixel-size);
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: var(--gris);
-}
-
-.pixelAnime:hover {
-    background: var(--violetC);
-}
-
-.switchLight {
-    animation: normal animeBgPixel 2s linear forwards;
-}
-
-@keyframes animeBgPixel {
-    0% {
-        color: var(--pixelBgColor);
+    .pixelAnime {
+        color: var(--gris);
     }
 
-    100% {
-        background: transparent;
+    @keyframes animeBgPixel {
+        0% {
+            background-color: var(--pixelBgColor);
+            color: var(--pixelBgColor);
+
+        }
+
+        100% {
+            background: transparent;
+            color: var(--gris);
+
+        }
     }
+
 }
