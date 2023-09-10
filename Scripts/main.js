@@ -1,3 +1,11 @@
+changeLangue(detecteLangue());
+function getMyAge() {
+    currentDate = new Date().getFullYear();
+
+    return currentDate - 1989;
+
+}
+
 function changeLangue(lang) {
 
     fetch('JSON/contenu.json')
@@ -9,13 +17,22 @@ function changeLangue(lang) {
                     element => {
                         const key = element.getAttribute('contenu');
                         if (data[lang] && data[lang][key]) {
-                            element.style.display = 'inline-block';
+                            element.style.display = 'inline';
                             element.innerHTML = data[lang][key];
                         }
                     });
+                // inserer variables ici
+                let myAge = getMyAge();
+                myAge += ".";
+                document.querySelector(".age").innerHTML += myAge;
+
+                //
             }
+
         })
         .catch(error => { console.error('probleme JSON introuvable') });
+
+
 }
 
 
@@ -24,8 +41,3 @@ function detecteLangue() {
 
     return navigator.language != 'fr' ? 'en' : 'fr';
 }
-
-
-changeLangue(detecteLangue());
-
-

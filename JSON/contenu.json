@@ -2,7 +2,12 @@
     "fr": {
         "le_casseur_des_codes": "Le Casseur des <b>Codes</b>",
         "presentation": "A propos de moi",
-        "ma_presentation": "Salut, je suis Idriss, Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi, quidem odit similique blanditiis molestiae? Optio ut quae, ea, ratione ducimus voluptates, repellat fugiat explicabo mollitia voluptatibus unde omnis voluptatum?",
+        "ma_presentation_1": "Salut, je suis Idriss, j'ai ",
+        "ma_presentation_2": "Je suis passionné par le développement. </br> Créer des choses a partir de code c’est tellement satisfaisant.",
+        "extra_about_me": "J’espère pouvoir transmettre mon enthousiasme à travers mes créations !",
+        "title_about_this_site": "A propos de ce site web",
+        "about_this_site": "Ce site web est a été implémenté et modifié au fur et à mesure que j'ai appris des choses sur les bases de la création d'un site internet.",
+        "about_this_site_2": "Le changement de langue a été fait avec du javascript et du JSON. </br>Il y a une meilleur manière de le faire ! Mais j'ai commencé avec cette idée et j'ai décidé de l'assumer jusqu'au bout",
         "mon_parcourt": "Mon <br>Parcourt",
         "mes_creations": "Mes <br>Créations",
         "mes_projets": "Mes <br>Projets",
@@ -11,14 +16,19 @@
         "text_creation_2": "Ca c'est la deuxième chose que j'ai faite... ",
         "text_projet_1": "Voila sur quoi je travail en ce moment...",
         "text_projet_2": "L'autre truck que je travail dessu",
-        "bouton_newsletter": "S'abonner à la newsletter",
         "news 1": "03/09 Nouvelle démo disponible ! Rends-toi dans mes 'projets'.",
-        "news 2": "Inscris-toi à la newsletter !"
+        "news 2": "Inscris-toi à la newsletter !",
+        "bouton_newsletter": "S'abonner à la newsletter"
     },
     "en": {
         "le_casseur_des_codes": "The <b>Code</b> Breaker",
         "presentation": "About me",
-        "ma_presentation": "Hi, my name is Idriss",
+        "ma_presentation_1": "Hi, my name is Idriss, I'm ",
+        "ma_presentation_2": "I'm passionate about development.",
+        "extra_about_me": "Making things from codes is so satisfying, and I hope I can convey my enthusiasm through my creations !",
+        "title_about_this_site": "About this website",
+        "about_this_site": "Ce site web est a été implémenté et modifié au fur et à mesure que j'ai appris des choses sur les bases de la création d'un site internet",
+        "about_this_site_2": "le changement de langue a été fait avec du javascript et du JSON. </br>Il y a une meilleur manière de le faire, mais c'est comment j'ai commencé et j'ai décidé de l'assumer jusqu'au bout",
         "mon_parcourt": "My <br>Background",
         "mes_creations": "My <br>Creations",
         "mes_projets": "My <br>projects",
@@ -27,8 +37,8 @@
         "text_creation_2": "This is the second thing I did...",
         "text_projet_1": " This is what I'm working on...",
         "text_projet_2": "The other thing I'm working on... ",
-        "bouton_newsletter": "Subscribe to newsletter",
         "news 1": "03/09 New demo available ! Find it in 'Projects'.",
-        "news 2": "Inscris-toi à la newsletter !"
+        "news 2": "Inscris-toi à la newsletter !",
+        "bouton_newsletter": "Subscribe to newsletter"
     }
 }
