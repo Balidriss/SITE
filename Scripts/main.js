@@ -23,9 +23,15 @@ function changeLangue(lang) {
                     });
                 // inserer variables ici
                 let myAge = getMyAge();
-                myAge += ".";
                 document.querySelector(".age").innerHTML += myAge;
+                let endpoint = ".";
 
+                if (lang == 'fr') {
+                    console.log("detect");
+                    endpoint = " ans.";
+
+                }
+                document.querySelector(".age").innerHTML += endpoint;
                 //
             }
 
@@ -37,7 +43,7 @@ function changeLangue(lang) {
 
 
 function detecteLangue() {
-    console.log(navigator.language);
+
 
     return navigator.language != 'fr' ? 'en' : 'fr';
 }
