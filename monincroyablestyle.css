@@ -235,10 +235,35 @@ section {
     overflow: auto;
     background-color: transparent;
     width: 90%;
+    min-height: 76vh;
     margin: 0 5%;
     z-index: var(--zSection);
     color: var(--default-Font-Color);
 
+}
+
+#presentation img {
+    position: absolute;
+    image-rendering: optimizeSpeed;
+    filter: grayscale(50%);
+
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    transform: translateX(0%);
+    animation: jeBouge 2s ease;
+}
+
+@keyframes jeBouge {
+    0% {
+        transform: translateX(-1000%);
+    }
+
+    100% {
+        transform: translateX(0%);
+
+    }
 }
 
 .end-section-body,
@@ -268,7 +293,7 @@ section {
 .box-container {
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
     background-color: var(--gris);
-    overflow:auto;
+    overflow: auto;
     display: inline-flex;
     padding: 10px;
     margin: 10px;
@@ -282,6 +307,7 @@ section {
 }
 
 .align-right {
+    display: flex;
     align-items: flex-end;
 }
 
@@ -442,6 +468,18 @@ header h2 {
 
 
 @media screen and (max-width: 600px) {
+
+    #presentation img {
+        position: absolute;
+        image-rendering: optimizeSpeed;
+        filter: grayscale(50%);
+
+        top: 0;
+        right: -120px;
+        z-index: -1;
+        height: 100%;
+
+    }
 
     nav {
         padding: 0;
