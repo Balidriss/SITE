@@ -25,8 +25,8 @@
         "text_parcours4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus sed massa nec dignissim. Suspendisse ante diam, hendrerit egestas fermentum a, pellentesque ac justo. Etiam ut pellentesque metus. Maecenas at porttitor erat. Phasellus facilisis quam et lacinia congue. Phasellus accumsan pellentesque metus, sed tincidunt mi dictum at. Proin sit amet dolor vel turpis pharetra congue vel vitae orci. Nulla vitae metus lectus. Vivamus hendrerit tortor quam. Ut pretium sit amet ante sit amet porta. Sed sit amet justo et tellus congue tempor. Donec eros odio, feugiat vel iaculis eu, imperdiet eget sem. ",
         "text_creation_1": "Voici ma création... ",
         "text_creation_2": "Ca c'est la deuxième chose que j'ai faite... ",
-        "text_link_1": "Voila sur quoi je travail en ce moment...",
-        "text_link_2": "L'autre truck que je travail dessu",
+        "text_link_1": "Mes liens : ",
+        "text_link_2": "<a href='https://linktr.ee/balidriss'>Link</a>",
         "news 1": "03/09 Nouvelle démo disponible ! Rends-toi dans 'mes liens'.",
         "news 2": "Inscris-toi à la newsletter !",
         "bouton_newsletter": "S'abonner à la newsletter"
@@ -57,8 +57,8 @@
         "text_parcours4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus sed massa nec dignissim. Suspendisse ante diam, hendrerit egestas fermentum a, pellentesque ac justo. Etiam ut pellentesque metus. Maecenas at porttitor erat. Phasellus facilisis quam et lacinia congue. Phasellus accumsan pellentesque metus, sed tincidunt mi dictum at. Proin sit amet dolor vel turpis pharetra congue vel vitae orci. Nulla vitae metus lectus. Vivamus hendrerit tortor quam. Ut pretium sit amet ante sit amet porta. Sed sit amet justo et tellus congue tempor. Donec eros odio, feugiat vel iaculis eu, imperdiet eget sem. ",
         "text_creation_1": "This is what I made...",
         "text_creation_2": "This is the second thing I did...",
-        "text_link_1": " This is what I'm working on...",
-        "text_link_2": "The other thing I'm working on... ",
+        "text_link_1": " My Links : ",
+        "text_link_2": "<a href='https://linktr.ee/balidriss'>Link</a> ",
         "news 1": "03/09 New demo available ! Find it in 'Links'.",
         "news 2": "Subscribe to the newsletter !",
         "bouton_newsletter": "Subscribe to newsletter"
