@@ -228,7 +228,7 @@ nav ul {
 
 
 section {
-    transition: 1s ease all;
+    transition: 1s ease-in-out all;
     position: relative;
     display: inline-flex;
     flex-wrap: wrap;
@@ -239,6 +239,7 @@ section {
     margin: 0 5%;
     z-index: var(--zSection);
     color: var(--default-Font-Color);
+    margin-bottom: 10px;
 
 }
 
@@ -258,10 +259,12 @@ section {
 @keyframes jeBouge {
     0% {
         transform: translateX(-1000%);
+
     }
 
     100% {
         transform: translateX(0%);
+
 
     }
 }
@@ -330,18 +333,6 @@ header img {
 
 
 }
-
-
-
-/* header:hover {
-
-    animation: anim 1s linear reverse;
-    background: linear-gradient(180deg, blueviolet 0%, #00000000 50%);
-    background-size: 200% 200%;
-    box-shadow: none;
-} */
-
-
 
 
 .lang-buttons {
@@ -469,13 +460,17 @@ header h2 {
 
 @media screen and (max-width: 600px) {
 
+    #presentation {
+        overflow: hidden;
+
+    }
+
     #presentation img {
         position: absolute;
         image-rendering: optimizeSpeed;
         filter: grayscale(50%);
-
+        transform: rotate(10deg);
         top: 0;
-        right: -120px;
         z-index: -1;
         height: 100%;
 
@@ -527,4 +522,17 @@ header h2 {
         }
     }
 
+    @keyframes jeBouge {
+        0% {
+            transform: rotate(0) translateX(-1000%);
+
+        }
+
+        100% {
+            transform: rotate(10deg) translateX(0%);
+
+
+        }
+
+    }
 }
