@@ -5,6 +5,7 @@
     --violetC: #712cf9;
     --violetF: #430EAD;
     --orange: #FAA346;
+    --orangeF: #b68340;
     --vertC: #14FA38;
     --vertF: #17AD2E;
     --gris: #333;
@@ -15,9 +16,13 @@
     --headerColor: var(--violetC);
     --langBtnBgColor: var(--orange);
     --hoverFontColor: black;
+    --hoverLinkColor: var(--vertC);
+    --hoverShadowColor: var(--vertC);
     --fontTabColor: var(--orange);
     --bgTabColor: var(--gris);
     --headerShadowColor: var(--vertF);
+    --linkColorVirgin: var(--orange);
+    --linkColorClicked: var(--orangeF);
     --default-Font-Color: var(--orange);
     /* misc */
 
@@ -147,6 +152,19 @@
     }
 }
 
+section a:link {
+    color: var(--linkColorVirgin);
+}
+
+section a:visited {
+    color: var(--linkColorClicked);
+}
+
+section a:hover {
+    color: var(--hoverLinkColor);
+    text-shadow: var(--hoverShadowColor) 1px 0 10px;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -254,6 +272,12 @@ section {
     height: 100%;
     transform: translateX(0%);
     animation: jeBouge 2s ease;
+}
+
+#other_links img {
+
+    display: flex;
+    align-self: center;
 }
 
 @keyframes jeBouge {
@@ -507,6 +531,15 @@ header h2 {
     .pixelAnime {
         color: var(--gris);
     }
+
+    #other_links .row {
+        flex-direction: column;
+    }
+
+    #other_links img {
+        display: none;
+    }
+
 
     @keyframes animeBgPixel {
         0% {
